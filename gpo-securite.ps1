@@ -13,7 +13,7 @@ Write-Host "`n=== Application des GPO de sécurité sur $DomainName ===" -Foregr
 
 
 # ==============================================================================
-# GPO 1 : POLITIQUE DE MOT DE PASSE (niveau domaine)
+# GPO 1 : POLITIQUE DE MOT DE PASSE
 # ==============================================================================
 
 Write-Host "`n[1/3] Configuration de la politique de mot de passe du domaine..." -ForegroundColor Yellow
@@ -75,12 +75,12 @@ Set-GPRegistryValue -Name "GPO_Securite_Workstations" `
 Set-GPRegistryValue -Name "GPO_Securite_Workstations" `
     -Key       "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" `
     -ValueName "ScreenSaveTimeOut" `
-    -Type      String -Value "600"   # 600 secondes = 10 minutes
+    -Type      String -Value "600" 
 
 Set-GPRegistryValue -Name "GPO_Securite_Workstations" `
     -Key       "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" `
     -ValueName "ScreenSaverIsSecure" `
-    -Type      String -Value "1"     # 1 = demande le mot de passe pour déverrouiller
+    -Type      String -Value "1"   
 
 # --- Liaison de la GPO à l'OU Ordinateurs ---
 $GPOLien = Get-GPInheritance -Target "OU=Ordinateurs,$RootOU" -ErrorAction SilentlyContinue
