@@ -59,7 +59,7 @@ Write-Host "     Fond d'écran forcé | Panneau de config désactivé | CMD dés
 # GPO 2 : EXCEPTION INFORMATIQUE
 # ==============================================================================
 
-Write-Host "`n[2/2] Création de la GPO 'GPO_Bureau_Informatique' (exception IT)..." -ForegroundColor Yellow
+Write-Host "`n[2/2] Création de la GPO 'GPO_Bureau_Informatique'..." -ForegroundColor Yellow
 
 $GPOExiste2 = Get-GPO -Name "GPO_Bureau_Informatique" -ErrorAction SilentlyContinue
 if (-not $GPOExiste2) {
