@@ -76,5 +76,5 @@ foreach ($GroupeNom in $DeptMapping.Keys) {
 }
 
 
-Write-Host "`n Groupes créés et membres ajoutés avec succès !" -ForegroundColor Green
+Write-Host "`n Groupes créés et membres ajoutés avec succès " -ForegroundColor Green
 Write-Host "   Prochaine étape : exécuter gpo-securite.ps1" -ForegroundColor White
