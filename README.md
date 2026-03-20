@@ -54,3 +54,27 @@ Gestion des objets Active Directory (utilisateurs, groupes, OU) via PowerShell
 Création et liaison de GPO pour sécuriser le domaine
 Automatisation de tâches répétitives (import CSV, création en masse)
 Infrastructure réseau virtuelle avec Hyper-V
+
+
+Structure du projet
+lab-active-directory/
+│
+├── README.md
+│
+├── hyperv/
+│   └── setup-vm.ps1
+│
+├── active-directory/
+│   ├── install-ad.ps1
+│   ├── create-ou.ps1
+│   ├── create-users.ps1
+│   ├── create-groups.ps1
+│   └── users.csv
+│
+├── gpo/
+│   ├── gpo-securite.ps1
+│   └── gpo-bureau.ps1
+│
+└── maintenance/
+    ├── audit-comptes.ps1
+    └── backup-ad.ps1
