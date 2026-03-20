@@ -71,7 +71,7 @@ foreach ($OU in $OUsSpeciales) {
 
 
 # ------------------------------------------------------------------------------
-# RÉSUMÉ visuel de la structure créée
+# RÉSUMÉ
 # ------------------------------------------------------------------------------
 
 Write-Host "`n=== Structure créée ===" -ForegroundColor Cyan
